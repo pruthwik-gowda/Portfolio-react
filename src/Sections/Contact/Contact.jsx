@@ -1,10 +1,39 @@
 import styles from './ContactStyles.module.css';
+import React, { useState } from 'react';
+import { useForm } from '@formspree/react';
 
-function Contact() {
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+
+  const [state, handleSubmit] = useForm("mzzpdwgn");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmitTest = async (e) => {
+    e.preventDefault(); // Prevent default form submission
+    console.log(formData); // Log form data
+    await handleSubmit(e); // Call Formspree's handleSubmit function
+  };
+
+  // if (state.succeeded) {
+  //   return <p>Thanks for joining!</p>;
+  // }
+
   return (
     <section id="section4" className={styles.container}>
       <h1 className="sectionTitle">Contact</h1>
-      <form action="">
+      <form onSubmit={handleSubmitTest}>
         <div className="formGroup">
           <label htmlFor="name" hidden>
             Name
@@ -15,6 +44,8 @@ function Contact() {
             id="name"
             placeholder="Name"
             required
+            value={formData.name}
+            onChange={handleChange}
           />
         </div>
         <div className="formGroup">
@@ -22,11 +53,13 @@ function Contact() {
             Email
           </label>
           <input
-            type="text"
+            type="email"
             name="email"
             id="email"
             placeholder="Email"
             required
+            value={formData.email}
+            onChange={handleChange}
           />
         </div>
         <div className="formGroup">
@@ -37,7 +70,9 @@ function Contact() {
             name="message"
             id="message"
             placeholder="Message"
-            required></textarea>
+            value={formData.message}
+            onChange={handleChange}
+          ></textarea>
         </div>
         <input className="hover btn" type="submit" value="Submit" />
       </form>

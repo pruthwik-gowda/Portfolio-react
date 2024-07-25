@@ -12,6 +12,11 @@
   --background-color-footer: #222;
 }
 
+.root{
+  margin:0px;
+  padding:0px;
+}
+
 [data-theme='dark'] {
   --background-color: #222;
   --btn-color: #fff;

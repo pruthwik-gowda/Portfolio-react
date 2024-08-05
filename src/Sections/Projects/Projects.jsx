@@ -26,7 +26,7 @@ function Projects() {
         />
         <ProjectCard
           src={bestBuyHero}
-          link="https://github.com/pruthwik-gowda/BestBuyBot"
+          link="https://github.com/pruthwik-gowda/BestBuyWebsite"
           h3="BestBuyBot"
           p="Want to save money on your next purchase?"
         />

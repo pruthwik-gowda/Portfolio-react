@@ -9,7 +9,7 @@ import linkedInLight from '../../assets/linkedin-light.svg'
 import twitterDark from '../../assets/twitter-dark.svg'
 import githubDark from '../../assets/github-dark.svg'
 import linkedInDark from '../../assets/linkedin-dark.svg'
-import Resume from '../../assets/pruthwik_gowda.pdf'
+import Resume from '../../assets/pruthwik_gowda (5).pdf'
 import { useTheme } from '../../Common/ThemeContext'
 
 const Hero = () => {

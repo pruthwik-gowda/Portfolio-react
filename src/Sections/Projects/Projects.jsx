@@ -14,19 +14,19 @@ function Projects() {
       <div className={styles.projectsContainer}>
         <ProjectCard
           src={sortingHero}
-          link="https://github.com/pruthwik-gowda/react-sorting-vis"
+          link="https://react-sorting-vis.vercel.app/"
           h3="SortViz"
           p="Sorting Vizualizer"
         />
         <ProjectCard
           src={fundingHero}
-          link="https://github.com/pruthwik-gowda/Fund-raising-blockchain"
+          link="https://fund-raising-blockchain.vercel.app/"
           h3="Dfund"
           p="Ethereum based crowdfunding DApp"
         />
         <ProjectCard
           src={bestBuyHero}
-          link="https://github.com/pruthwik-gowda/BestBuyWebsite"
+          link="https://best-buy-website.vercel.app/"
           h3="BestBuyBot"
           p="Want to save money on your next purchase?"
         />
